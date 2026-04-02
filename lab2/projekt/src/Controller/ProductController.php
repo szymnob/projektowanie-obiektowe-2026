@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/api/products', name: 'api_product_')]
 final class ProductController extends AbstractController
 {
-    // 1. READ ALL (Pobieranie wszystkich)
+    // 1. READ ALL
     #[Route('', name: 'index', methods: ['GET'])]
     public function index(ProductRepository $repository): JsonResponse
     {
@@ -22,14 +22,14 @@ final class ProductController extends AbstractController
         return $this->json($products);
     }
 
-    // 2. READ ONE (Pobieranie jednego po ID)
+    // 2. READ ONE
     #[Route('/{id}', name: 'show', methods: ['GET'])]
     public function show(Product $product): JsonResponse
     {
         return $this->json($product);
     }
 
-    // 3. CREATE (Tworzenie nowego)
+    // 3. CREATE
     #[Route('', name: 'create', methods: ['POST'])]
     public function create(Request $request, EntityManagerInterface $em): JsonResponse
     {
@@ -46,7 +46,7 @@ final class ProductController extends AbstractController
         return $this->json(['message' => 'Produkt utworzony!', 'id' => $product->getId()], Response::HTTP_CREATED);
     }
 
-    // 4. UPDATE (Aktualizacja istniejącego)
+    // 4. UPDATE
     #[Route('/{id}', name: 'update', methods: ['PUT', 'PATCH'])]
     public function update(int $id, Request $request, ProductRepository $repository, EntityManagerInterface $em): JsonResponse
     {
@@ -68,7 +68,7 @@ final class ProductController extends AbstractController
         return $this->json(['message' => 'Produkt zaktualizowany!']);
     }
 
-    // 5. DELETE (Usuwanie)
+    // 5. DELETE
     #[Route('/{id}', name: 'delete', methods: ['DELETE'])]
     public function delete(int $id, ProductRepository $repository, EntityManagerInterface $em): JsonResponse
     {
@@ -82,5 +82,27 @@ final class ProductController extends AbstractController
         $em->flush();
 
         return $this->json(['message' => 'Produkt usunięty!'], Response::HTTP_OK);
+    }
+
+
+    // DODATKOWA METODA DO GENEROWANIA TESTOWYCH DANYCH
+    #[Route('/test/generate-test-data', name: 'api_generate_data', methods: ['GET'])]
+    public function generate(EntityManagerInterface $em): JsonResponse
+    {
+        $p1 = new Product();
+        $p1->setName('Laptop');
+        $p1->setPrice(3500);
+        $p1->setDescription('Mocny sprzęt');
+
+        $p2 = new Product();
+        $p2->setName('Myszka');
+        $p2->setPrice(150);
+        $p2->setDescription('Bezprzewodowa');
+
+        $em->persist($p1);
+        $em->persist($p2);
+        $em->flush();
+
+        return $this->json(['message' => 'Dodano testowe produkty!']);
     }
 }
