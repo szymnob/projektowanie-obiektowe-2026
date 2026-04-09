@@ -1,13 +1,14 @@
 package com.szymnob.lab3.controller
 
 import com.szymnob.lab3.model.User
+import com.szymnob.lab3.service.AuthService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api")
-class UserController {
+class UserController() {
 
     @GetMapping("/users")
     fun getUsers(): List<User> {
