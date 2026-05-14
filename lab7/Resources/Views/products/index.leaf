@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produkty</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    h1 { color: #333; }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+    }
+    .btn-primary:hover { background-color: #0056b3; }
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+    }
+    .btn-danger:hover { background-color: #c82333; }
+    .btn-info {
+      background-color: #17a2b8;
+      color: white;
+    }
+    .btn-info:hover { background-color: #138496; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      color: #333;
+    }
+    tr:hover { background-color: #f9f9f9; }
+    .actions {
+      white-space: nowrap;
+    }
+    .empty-message {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+      background-color: white;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📦 Zarządzanie Produktami</h1>
+    <a href="/products/create" class="btn btn-primary">+ Dodaj Produkt</a>
+  </div>
+
+  #if(count(products) > 0):
+    <table>
+      <thead>
+        <tr>
+          <th>Nazwa</th>
+          <th>Cena (PLN)</th>
+          <th>Akcje</th>
+        </tr>
+      </thead>
+      <tbody>
+        #for(product in products):
+          <tr>
+            <td>#(product.name)</td>
+            <td>#(product.price) PLN</td>
+            <td class="actions">
+              <a href="/products/#(product.id)" class="btn btn-info">Podgląd</a>
+              <a href="/products/#(product.id)/edit" class="btn btn-primary">Edytuj</a>
+              <form method="POST" action="/products/#(product.id)/delete" style="display:inline;">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Czy na pewno?');">Usuń</button>
+              </form>
+            </td>
+          </tr>
+        #endfor
+      </tbody>
+    </table>
+  #else:
+    <div class="empty-message">
+      <p>Brak produktów. <a href="/products/create">Dodaj pierwszy!</a></p>
+    </div>
+  #endif
+</body>
+</html>
