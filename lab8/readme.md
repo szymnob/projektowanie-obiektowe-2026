@@ -5,7 +5,7 @@ JS, Go, Scala)
 pól obowiązkowych oraz zachowania aplikacji po wprowadzeniu
 niepoprawnego formatu adresu e-mail.
 
-3.5 Przeprowadź testy bezpieczeństwa typu Cross-Site Scripting (XSS),
+✅ 3.5 Przeprowadź testy bezpieczeństwa typu Cross-Site Scripting (XSS),
 próbując wstrzyknąć złośliwy kod JavaScript w aplikacji z Reactem
 
 4.0 Przetestuj działanie koszyka zakupowego przy jednoczesnym otwarciu
