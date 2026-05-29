@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:projektowanie-obiektowe-2026}/lab7",
+            "name": "Debug lab7 (lab7)",
+            "target": "lab7",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug lab7 (lab7)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:projektowanie-obiektowe-2026}/lab7",
+            "name": "Release lab7 (lab7)",
+            "target": "lab7",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release lab7 (lab7)"
+        }
+    ]
+}
