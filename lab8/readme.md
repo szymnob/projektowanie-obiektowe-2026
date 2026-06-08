@@ -1,6 +1,8 @@
 Wykorzystaj do tego zadania Selenium/Webdrivera (Kotlin, Python, Java,
 JS, Go, Scala)
 
+https://github.com/user-attachments/assets/158bf4d1-7391-4027-a974-3397c5904dac
+
 ✅ 3.0 Przetestuj formularz rejestracji użytkownika pod kątem walidacji
 pól obowiązkowych oraz zachowania aplikacji po wprowadzeniu
 niepoprawnego formatu adresu e-mail.
