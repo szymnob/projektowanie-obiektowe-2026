@@ -1,6 +1,8 @@
 Zadanie 5 Wzorce behawioralne
 React (JavaScript/Typescript)
 
+https://github.com/user-attachments/assets/eedf5f7d-c6ee-4f44-8238-c2b4599656f8
+
 ✅ 3.0 W ramach projektu należy stworzyć komponenty Produkty oraz
 Płatności; komponent Produkty powinien pobierać listę produktów z
 aplikacji serwerowej, natomiast komponent Płatności powinien wysyłać
