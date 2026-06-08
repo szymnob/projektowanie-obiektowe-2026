@@ -3,6 +3,8 @@
 Zadanie 2 Wzorce architektury
 Symfony (PHP)
 
+https://github.com/user-attachments/assets/318c514b-f4f3-49f7-962c-fbf42925fabb
+
 Należy stworzyć aplikację webową na bazie frameworka Symfony na
 obrazie kprzystalski/projobj-php:latest. Baza danych dowolna, sugeruję
 SQLite.
