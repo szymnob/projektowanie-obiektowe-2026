@@ -1,5 +1,7 @@
 Zadanie 8 Zapaszki
 
+https://github.com/user-attachments/assets/9b4cd1d7-51a1-404a-801c-9db7efd7d7bb
+
 Należy sprawdzić kod projektów JS 3.0, 3.5, 4.0,  kotlin, go, js -
 4.5, 5.0.
 
