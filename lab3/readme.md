@@ -1,5 +1,8 @@
 Zadanie 3 Wzorce kreacyjne
 Spring Boot (Kotlin)
+
+https://github.com/user-attachments/assets/c502f129-262a-46e1-879c-645b99cd62f9
+
 Proszę stworzyć prosty serwis do autoryzacji, który zasymuluje
 autoryzację użytkownika za pomocą przesłanej nazwy użytkownika oraz
 hasła. Serwis powinien zostać wstrzyknięty do kontrolera (4.5).
