@@ -1,3 +1,6 @@
+
+https://github.com/user-attachments/assets/1b37265d-a9c7-4a02-948e-de0320546849
+
 Proszę napisać prostą aplikację w Vaporze, wykorzystując Leaf jako
 silnik szablonów or Fluent jako ORM. Proszę stworzyć trzy modele oraz
 CRUD dla każdego z nich. Należy stworzyć model z minimum jedną
