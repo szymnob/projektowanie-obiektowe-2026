@@ -1,5 +1,7 @@
 Zadanie 4 Wzorce strukturalne
 
+https://github.com/user-attachments/assets/8d066f07-26a7-4fd5-8f58-d2a7013ea4bf
+
 Echo (Go)
 Należy stworzyć aplikację w Go na frameworku echo. Aplikacja ma mieć
 jeden endpoint, minimum jedną funkcję proxy, która pobiera dane np. o
